@@ -91,7 +91,11 @@ int main ()
         string id;
         cin >> id;
         for (unsigned i = 0; i < evI.size(); i++)
-            if (evI[i].cautare(id))evI.erase(evI.begin() + i);
+            if (evI[i].cautare(id))
+            {
+                evI.erase(evI.begin() + i);
+                break;
+            }
         for (unsigned i = 0; i < evIR.size(); i++)
             if (evIR[i].cautare(id))
             {
