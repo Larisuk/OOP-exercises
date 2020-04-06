@@ -38,6 +38,7 @@ istream& operator>>(istream& in, EvenimentColectivRecurent& e) {
         in >> a;
         e.participanti.push_back(a);
     }
+    e.c = e.cost();
     return in;
 }
 
@@ -49,11 +50,38 @@ ostream& operator<< (ostream& out, const EvenimentColectivRecurent e) {
     out << "Locatie: " << e.locatie << endl;
     out << "ID: " << e.ID << endl;
     out << "Durata: " << e.durata << " minute" << endl;
-    out << "Eveniment:" << e.recurenta;
+    out << "Eveniment:" << e.recurenta << endl;
+    out << "Costul:" << e.c << endl;
     out << "Participanti: ";
     for (string a : e.participanti)
     {
         out << a << ", ";
     }
     return out;
+}
+int EvenimentColectivRecurent::cost()
+{
+
+    if (this->recurenta == "zilnic")
+    {
+        int c = (30 * participanti.size() * (this->durata / 60) - 18 * (30 * this->participanti.size() * (this->durata / 60)) / 100);
+        return c;
+    }
+    if (this->recurenta == "saptamanal")
+    {
+        int c = (30 * participanti.size() * (this->durata / 60) - 13 * (30 * this->participanti.size() * (this->durata / 60)) / 100);
+        return c;
+    }
+    if (this->recurenta == "lunar")
+    {
+        int c = (30 * participanti.size() * (this->durata / 60) - 7 * (30 * this->participanti.size() * (this->durata / 60)) / 100);
+        return c;
+    }
+    if (this->recurenta == "anual")
+    {
+        int c = (30 * participanti.size() * (this->durata / 60) - 5 * (30 * this->participanti.size() * (this->durata / 60)) / 100);
+        return c;
+    }
+
+
 }

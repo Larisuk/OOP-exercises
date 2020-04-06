@@ -15,5 +15,6 @@ public:
 	EvenimentColectivRecurent();
 	friend istream& operator>>(istream&, EvenimentColectivRecurent&);
 	friend ostream& operator<<(ostream&, const EvenimentColectivRecurent);
+	int cost();
 };
 #endif

@@ -12,6 +12,7 @@ class EvenimentColectiv :public Eveniment
         EvenimentColectiv();
    friend istream& operator>>(istream&, EvenimentColectiv&);
    friend ostream& operator<<(ostream&, const EvenimentColectiv);
+   int cost();
 
 
 };

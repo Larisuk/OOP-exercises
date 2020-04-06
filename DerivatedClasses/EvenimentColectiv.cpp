@@ -31,6 +31,7 @@
         in>>a;
         e.participanti.push_back(a);
     }
+    e.c = e.cost();
     return in;
 }
 
@@ -42,10 +43,16 @@ ostream& operator<< (ostream& out, const EvenimentColectiv e) {
     out << "Locatie: " << e.locatie << endl;
     out << "ID: " << e.ID << endl;
     out << "Durata: " << e.durata << " minute" << endl;
+    out << "Costul:" << e.c << endl;
     out << "Participanti: ";
     for(string a :e.participanti)
     {
         out<<a<<", ";
     }
     return out;
+}
+int EvenimentColectiv::cost()
+{
+    int sumaGrupa = 30 * this->participanti.size();
+    return sumaGrupa * (this->durata / 60);
 }

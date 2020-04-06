@@ -13,6 +13,7 @@ public:
     EvenimentRecurent();
     friend istream& operator>>(istream&, EvenimentRecurent&);
     friend ostream& operator<<(ostream&, const EvenimentRecurent);
+    int cost();
 };
 
 

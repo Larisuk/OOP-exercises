@@ -24,7 +24,7 @@ istream& operator>>(istream& in,EvenimentRecurent& e){
     in >> e.durata;
     std::cout << "Introduceti recurenta:";
     in >> e.recurenta;
-
+    e.c = e.cost();
     return in;
 }
 
@@ -36,5 +36,32 @@ ostream& operator<< (ostream& out, const EvenimentRecurent e) {
     out << "ID: " << e.ID << endl;
     out << "Durata: " << e.durata << " minute" << endl;
     out << "Eveniment "<<e.recurenta<<endl;
+    out << "Costul:" << e.c << endl;
     return out;
+}
+
+int EvenimentRecurent::cost()
+{
+
+    if (this->recurenta == "saptamanal")
+    {
+        int c = 30 * (this->durata / 60) - 18 * (30 * (this->durata / 60)) / 100;
+        return c;
+    }
+    if (this->recurenta == "saptamanal")
+    {
+        int c = 30 * (this->durata / 60) - 13 * (30 * (this->durata / 60)) / 100;
+        return c;
+    }
+    if (this->recurenta == "lunar")
+    {
+        int c = 30 * (this->durata / 60) - 7 * (30 * (this->durata / 60)) / 100;
+        return c;
+    }
+    if (this->recurenta == "anual")
+    {
+        int c = 30 * (this->durata / 60) - 5 * (30 * (this->durata / 60)) / 100;
+        return c;
+    }
+
 }
