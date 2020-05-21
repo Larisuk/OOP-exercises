@@ -13,6 +13,7 @@ private:
 public:
 	Ingredient();
 	Ingredient( string, double, int, string);
+	Ingredient(const Ingredient& i);
 	double getPret() { return pretIng; }
 	Ingredient operator +(int i);
 	Ingredient operator -=(double i);

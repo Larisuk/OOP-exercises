@@ -14,6 +14,8 @@ private:
 	bool vegPizza;
 	static int contor;
 	double pretul;
+protected:
+	virtual void displayExtra(ostream& out) const {};
 public:
 	Pizza();
 	Pizza(string, Ingredient I[], int, bool);

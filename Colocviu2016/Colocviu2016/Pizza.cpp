@@ -13,7 +13,7 @@ Pizza::Pizza(string den, Ingredient I[], int nrIng, bool veg):Pizza()
 	denPizza = den;
 	nringPizza = nrIng;
 	vegPizza = veg;
-	for (unsigned i = 0; i < sizeof(I); i++)
+	for (unsigned i = 0; i < nrIng; i++)
 	{
 		ingPizza.push_back(&I[i]);
 	}
@@ -59,11 +59,9 @@ Pizza Pizza::operator+(Ingredient& i)
 
 Pizza Pizza::operator -(Ingredient& i)
 {
-	Pizza p;
-	p = *this;
+	Pizza p=*this;
 	for (int j = 0; j < ingPizza.size(); j++)
 	{
-		cout << p.ingPizza[j];
 		if (ingPizza[j] == &i)
 		{
 			p.ingPizza.erase(j+ p.ingPizza.begin());
@@ -76,7 +74,6 @@ Pizza Pizza::operator -(Ingredient& i)
 
 Pizza& Pizza::nume(string c)
 {
-	// TODO: insert return statement here
 	this->denPizza = c;
 	return *this;
 }
@@ -89,6 +86,7 @@ ostream& operator<<(ostream& out,const Pizza& p)
 	else cout << "vegetariana";
 	for (unsigned i = 0; i < p.ingPizza.size(); i++)
 		out << *p.ingPizza[i] << ",";
+	p.displayExtra(out);
 	return out;
 
 }

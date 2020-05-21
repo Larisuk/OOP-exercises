@@ -10,6 +10,14 @@ Ingredient::Ingredient()
 
 Ingredient::Ingredient(string d, double p,int c, string m):pretIng(p),denIng(d),cantIng(c), masIng(m){}
 
+Ingredient::Ingredient(const Ingredient& i)
+{
+	this->pretIng = i.pretIng;
+	this->denIng = i.denIng;
+	this->cantIng = i.cantIng;
+	this->masIng = i.masIng;
+}
+
 Ingredient Ingredient ::operator+(int i)
 {
 	Ingredient alfa;
@@ -53,7 +61,7 @@ void Ingredient::del()
 
 ostream& operator<<(ostream& out, const Ingredient& i)
 {
-	out << i.denIng << "," <<"cantitate:"<< i.cantIng << "," << i.masIng << "," << i.pretIng << endl;
+	if(i.denIng!="" && i.cantIng!=0 && i.masIng!="" && i.pretIng!=0)out << i.denIng << "," <<"cantitate:"<< i.cantIng << "," << i.masIng << "," << i.pretIng << endl;
 	return out;
 }
 

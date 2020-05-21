@@ -1,3 +1,5 @@
-﻿  Pizza.cpp
-D:\Facultate\POO\OOP-exercises\Colocviu2016\Colocviu2016\Pizza.cpp(64,20): warning C4018: '<': signed/unsigned mismatch
+﻿  Colocviu2016.cpp
+D:\Facultate\POO\OOP-exercises\Colocviu2016\Colocviu2016\OfSpec.h(6,9): warning C4584: 'OfSpec': base-class 'Pizza' is already a base-class of 'PizzaSpec'
+D:\Facultate\POO\OOP-exercises\Colocviu2016\Colocviu2016\Pizza.h(7): message : see declaration of 'Pizza'
+D:\Facultate\POO\OOP-exercises\Colocviu2016\Colocviu2016\PizzaSpec.h(6): message : see declaration of 'PizzaSpec'
   Colocviu2016.vcxproj -> D:\Facultate\POO\OOP-exercises\Colocviu2016\Debug\Colocviu2016.exe
