@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Bautura.h"
+#include<set>
 #include "Pizza.h"
 #include "PizzaSpec.h"
 #include "OfSpec.h"
@@ -14,7 +15,7 @@ int main()
     Ingredient lista[5] = { Ingredient ("piept de pui", 15, 1, "kg"), Ingredient("sare",0.75, 10,"gram")
      , Ingredient("salam",1.5,5,"felii"),lista[2], Ingredient()};
     Ingredient lista2[2] = { Ingredient("ketchup", 15, 1, "ml"), Ingredient("porumb",0.75, 10,"gram") };
-    cin >> lista[4];
+  //  cin >> lista[4];
     Pizza p1("Rustica", lista,  4,false);
     lista[3]=lista[3] + 3; // se adaugă 3 felii de salam la ingredient
     lista[1]++; // se adaugă un gram de sare la ingredient
@@ -33,6 +34,10 @@ int main()
     cout << p3.nume() << " " << p3.pret() << endl;
     int op;
     vector<Pizza*> pizze;
+    vector<OfSpec> oferte;
+    Bautura b("Cola", 12);
+    OfSpec of(p2, b);
+    oferte.push_back(of);
     pizze.push_back(&p1);
     pizze.push_back(&p2);
     pizze.push_back(&p3);
@@ -53,23 +58,36 @@ int main()
             break;
         }
         case 3: {
-
+            for (unsigned i = 0; i < pizze.size(); i++)
+            {
+                vector<Ingredient*> ingr = pizze[i]->getIngrediente();
+                int nr = ingr.size();
+                set<string> numeingrediente;
+                for (auto ob : lista)
+                {
+                    numeingrediente.insert(ob.getNume());
+                }
+                cout << "Pentru pizza:" << pizze[i]->nume() << endl;
+                for (auto ob : numeingrediente)
+                {
+                    int contor = 0;
+                    for (int j = 0; j < nr; j++)
+                        if (ob == ingr[j]->getNume())contor++;
+                    if (contor == 1)cout << ob<<endl;
+                    else if (contor > 1)cout << ob << " care apare de " << contor << " ori." << endl;
+                }
+           }
             break;
         }
         case 4: {
+            for (auto ob : oferte)cout << ob << endl;
             break;
         }
         }
 
     } while (op > 0 && op < 5);
-    /*Ingredient lista[5] = { Ingredient(”piept de pui”, 15, 1, ”kg”), Ingredient("sare",0.75, 10,
-”gram”), Ingredient(”salam”,1.5,5, ”felii”), lista[2], Ingredient() }, i1(”sunca”, 3, 2, ”felii”);
-    cin& gt; &gt; lista[4]; // se citește un nou ingredient
-  
-    for (int i = 0; i & lt; 5; i++) cout& lt; &lt; ”Ingredient: “& lt; &lt; lista[i] & lt; &lt; endl;
-*/
+ 
 
-    
     return 0;
 }
 

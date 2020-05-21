@@ -14,6 +14,7 @@ public:
 	Ingredient();
 	Ingredient( string, double, int, string);
 	Ingredient(const Ingredient& i);
+	string getNume(){ return denIng; }
 	double getPret() { return pretIng; }
 	Ingredient operator +(int i);
 	Ingredient operator -=(double i);
