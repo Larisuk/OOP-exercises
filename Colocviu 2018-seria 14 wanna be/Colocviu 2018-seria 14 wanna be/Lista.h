@@ -116,7 +116,12 @@ public:
 	}
 	void probl3() {
 		cout << "Muzeul are " << Ghid.size() << " cereri de ghidaje." << endl;
-		cout << "Suma obtinuta: " << Ghid.size() * 100 << " lei" << endl;
+		int g = Ghid.size() * 100;
+		for (unsigned i = 0; i < Ghid.size(); i++)
+		{
+			if (Ghid[i].pers > 10)g += 100;
+		}
+		cout << "Suma obtinuta: " << g << " lei" << endl;
 		int nr = 0;
 		for (unsigned j = 0; j < eve.size(); j++)
 		{
@@ -130,5 +135,13 @@ public:
 		cout << "Trasee digitale:" << traseuDigit << endl;
 	}
 	unsigned getGhid() { return Ghid.size(); }
+	double incasari() {
+		int total = 0;
+		total= Ghid.size() * 100;
+		for (unsigned i = 0; i < Ghid.size(); i++)
+		{
+			if (Ghid[i].pers > 10)total+= 100;
+		}
+	}
 };
 

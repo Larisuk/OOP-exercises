@@ -28,5 +28,6 @@ public:
 		out<< v.varsta;
 		return out;
 	}
+	unsigned getVarsta() { return varsta; }
 };
 
