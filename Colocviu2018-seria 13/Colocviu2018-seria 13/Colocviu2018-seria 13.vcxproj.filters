@@ -24,12 +24,36 @@
     <ClCompile Include="Precomanda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Companie1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Companie3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MegaCompanie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RentaCar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Companie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Precomanda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Companie1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Companie3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MegaCompanie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RentaCar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

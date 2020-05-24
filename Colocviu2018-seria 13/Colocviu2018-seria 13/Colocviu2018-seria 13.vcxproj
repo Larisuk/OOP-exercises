@@ -149,10 +149,18 @@
   <ItemGroup>
     <ClCompile Include="Colocviu2018-seria 13.cpp" />
     <ClCompile Include="Companie.cpp" />
+    <ClCompile Include="Companie1.cpp" />
+    <ClCompile Include="RentaCar.cpp" />
+    <ClCompile Include="Companie3.cpp" />
+    <ClCompile Include="MegaCompanie.cpp" />
     <ClCompile Include="Precomanda.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Companie.h" />
+    <ClInclude Include="Companie1.h" />
+    <ClInclude Include="RentaCar.h" />
+    <ClInclude Include="Companie3.h" />
+    <ClInclude Include="MegaCompanie.h" />
     <ClInclude Include="Precomanda.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

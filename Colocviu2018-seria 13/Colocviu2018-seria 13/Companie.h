@@ -4,11 +4,15 @@ using namespace std;
 
 class Companie
 {
-private:
+protected:
+	static double tarifFix;
 	string denumire;
 	static int contor;
-	int cod;
+	int codFiscal;
+	double pretCursa;
+	double tarifKm;
 public:
+	
 
 };
 
