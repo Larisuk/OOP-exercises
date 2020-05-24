@@ -60,11 +60,12 @@ public:
 					cout << "Ora:";
 					in >> l.autoGhid.ora;
 					cout << "Limba:";
+					in >> l.autoGhid.limba;
 					while (true) {
 						try {
 							cout << "Nr.persoane:";
 							in >> l.autoGhid.pers;
-							if (l.autoGhid.pers)throw "\nNu se pot programa mai mult de 20 de pers.]n";
+							if (l.autoGhid.pers>20)throw "\nNu se pot programa mai mult de 20 de pers.]n";
 							else break;
 						}
 						catch (const char*e) {
@@ -136,12 +137,21 @@ public:
 	}
 	unsigned getGhid() { return Ghid.size(); }
 	double incasari() {
-		int total = 0;
+		double total = 0;
 		total= Ghid.size() * 100;
 		for (unsigned i = 0; i < Ghid.size(); i++)
 		{
 			if (Ghid[i].pers > 10)total+= 100;
 		}
+		for (unsigned j = 0; j < eve.size(); j++)
+		{
+			if (EvenimentTemporar* p = dynamic_cast<EvenimentTemporar*>(eve[j]))
+			{
+				total+=dynamic_cast<EvenimentTemporar*>(eve[j])->getCost();
+			}
+
+		}
+		return total;
 	}
 };
 

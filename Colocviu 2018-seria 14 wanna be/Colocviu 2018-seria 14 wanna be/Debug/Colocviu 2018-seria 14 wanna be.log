@@ -1,6 +1,8 @@
 ﻿  Colocviu 2018-seria 14 wanna be.cpp
 D:\Facultate\POO\OOP-exercises\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be\Eveniment.h(23,26): warning C4018: '<': signed/unsigned mismatch
 D:\Facultate\POO\OOP-exercises\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be\EvenimentSpecial.h(15,26): warning C4018: '<': signed/unsigned mismatch
+D:\Facultate\POO\OOP-exercises\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be.cpp(26,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Facultate\POO\OOP-exercises\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be.cpp(32,59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Lista.cpp
 D:\Facultate\POO\OOP-exercises\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be\Eveniment.h(23,26): warning C4018: '<': signed/unsigned mismatch
 D:\Facultate\POO\OOP-exercises\Colocviu 2018-seria 14 wanna be\Colocviu 2018-seria 14 wanna be\EvenimentSpecial.h(15,26): warning C4018: '<': signed/unsigned mismatch

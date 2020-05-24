@@ -29,5 +29,6 @@ public:
 		return out;
 	}
 	unsigned getVarsta() { return varsta; }
+	string getCategorie() { return categorie; }
 };
 

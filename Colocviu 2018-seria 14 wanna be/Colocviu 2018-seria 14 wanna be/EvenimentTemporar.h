@@ -34,5 +34,16 @@ public:
 	int getLuna() { return data.luna; }
 	int getAn() { return data.an; }
 	bool getTemp() { return disponibil; }
+	double getCost() {
+		double suma = 0;
+		for (unsigned i = 0; i < vizitatori.size(); i++)
+		{
+			if (vizitatori[i].getVarsta() <= 7)suma +=0;
+			if (vizitatori[i].getCategorie() == "student" || vizitatori[i].getCategorie() == "elev")suma += (pretIntrare - pretIntrare * 75 / 100);
+			if (vizitatori[i].getCategorie() == "pensionar")suma += pretIntrare * 1 / 2;
+		}
+		return suma;
+	}
+
 };
 

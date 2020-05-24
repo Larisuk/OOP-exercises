@@ -20,6 +20,22 @@ int main()
                 cout << muzee[i] << endl;
             break;
         }case 2: {
+            unsigned poz = 0;
+            for (unsigned i = 0; i < muzee.size(); i++)
+            {
+                float max = muzee[i].getLista().incasari();
+                poz = i;
+                for (unsigned j = i+1; j < muzee.size(); j++)
+                {
+                    if (muzee[j].getLista().incasari() < max)
+                    {
+                        max = muzee[j].getLista().incasari();
+                        poz = j;
+                    }
+                }
+                cout << muzee[poz] << endl;
+
+            }
             break;
         }case 3: {
             int suma = 0;

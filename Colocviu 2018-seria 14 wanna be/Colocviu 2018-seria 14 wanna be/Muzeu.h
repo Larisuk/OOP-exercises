@@ -12,7 +12,7 @@ private:
 	bool servTuristice;
 	vector<string> cerFil;
 	vector<string> cerTur;
-	bool ghid;
+
 
 public:
 	Muzeu() = default;
@@ -57,6 +57,7 @@ public:
 				nr--;
 			}
 		}
+
 		in >> m.l;
 		return in;
 	}
@@ -96,7 +97,7 @@ public:
 		if (servTuristice && cerTur.size() != 0)return true;
 		return false;
 	}
-	bool getGhid() { return ghid; }
+
 	Lista getLista() { return l; }
 };
 
